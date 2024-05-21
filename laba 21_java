@@ -1,0 +1,22 @@
+package com.company;
+public class Main {
+    private static Main popka = new Main();
+
+    private Main()
+    {
+    }
+    public static Main getInstance()
+    {
+        return popka;
+    }
+    public void calculate(int x, int y)
+    {
+        double result = 2 * x + 3.0 / y;
+        System.out.println("Результат вычисления при x= " + x + " и y= " + y + " равен " + result);
+    }
+    public static void main(String[] args)
+    {
+        Main calculator = Main.getInstance();
+        calculator.calculate(5,5);
+    }
+}
